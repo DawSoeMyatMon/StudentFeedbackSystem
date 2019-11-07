@@ -1,0 +1,205 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/MasterPage.Master" AutoEventWireup="true"
+    CodeBehind="BeforeCOB.aspx.cs" Inherits="T24Reporting2.Pages.BeforeCOB" %>
+
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script language="javascript" type="text/javascript">
+        function ddlChange() {
+            var ddl = document.getElementById('<%=ddlReport.ClientID %>');
+            var val = ddl.options[ddl.selectedIndex].text;
+            var valindex = ddl.options[ddl.selectedIndex].value;
+            
+            selectItemByValue(ddl, val);
+            $("#hdtReportName").val(val.toString());
+        }
+        function selectItemByValue(elmnt, value) {
+            for (var i = 0; i < elmnt.options.length; i++) {
+                if (elmnt.options[i].value == value)
+                    elmnt.selectedIndex = i;
+            }
+        }
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div class="row">
+        <div class="col-lg-3">
+            MMB Admin
+        </div>
+        <div class="col-lg-9 menu">
+            <a href="" class="">COB |</a><a href="">Password |</a><a href="">Enq2Report |</a>
+            <a href="">Acc Statement |</a><a href="">Report Viewer |</a><a href="">Data Upload |</a><a
+                href="">Report Config |</a><a href="">User Admin |</a><a href="">Logout</a></div>
+    </div>
+    <div class="col-lg-12">
+        <hr class="textline" />
+        <div id="res">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3" style="border-right: 1px solid black;">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="border-left: 1px solid #808080; border-top: 1px solid #808080; border-right: 1px solid #808080;
+                        background-color: #add8e6; text-align: center;">
+                        <a href="BeforeCOB.aspx" style="color: Black; text-decoration: none;">Before</a>
+                    </td>
+                    <td class="ReportLinkACOB" style="width: 50%; text-align: center; border: 1px solid #808080;">
+                        <a href="AfterCOB.aspx" style="color: Black; text-decoration: none;">After</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                        <asp:HiddenField ID="hdtReportName" ClientIDMode="Static" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Report Type
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlReportType" CssClass="form-control" runat="server" Style="width: 50;"
+                            OnSelectedIndexChanged="ddlReportType_SelectedIndexChanged" AppendDataBoundItems="true"
+                            AutoPostBack="true" DataTextField="ReportTypeName" DataValueField="ReportTypeID">
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Select Report
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlReport" CssClass="form-control" runat="server" Style="width: 50;"
+                            DataTextField="ReportTypeName" onchange="ddlChange();" DataValueField="ReportTypeID"
+                            AppendDataBoundItems="true">
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Select Branch
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlBranch" CssClass="form-control" runat="server" Style="width: 50;"
+                            AutoPostBack="true" DataTextField="BranchName" DataValueField="BranchCode" AppendDataBoundItems="true"
+                            OnSelectedIndexChanged="ddlBranch_OnSelectedIndexChanged">
+                            <asp:ListItem Text="Choose Branch" Value="-1"></asp:ListItem>
+                            <asp:ListItem Text="All" Value="0"></asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Currency
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlCurrency" CssClass="form-control" runat="server" Style="width: 50;">
+                            <asp:ListItem Value="1">MMK</asp:ListItem>
+                            <asp:ListItem Value="2">USD</asp:ListItem>
+                            <asp:ListItem Value="3">SGD</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Report Format
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlReportFormat" CssClass="form-control" runat="server" Style="width: 50;">
+                            <asp:ListItem Value="1">PDF</asp:ListItem>
+                            <asp:ListItem Value="2">XLS</asp:ListItem>
+                            <asp:ListItem Value="3">MSWord</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblFromDate" runat="server" Text="From Date"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtFromDate" TextMode="Date" runat="server" Style="border-color: #DDDDDD;"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblToDate" runat="server" Text="To Date"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtToDate" TextMode="Date" runat="server" Style="border-color: #DDDDDD;"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-lg-2">
+                        </div>
+                    </td>
+                    <td style="text-align: center; width: 50;">
+                        <asp:LinkButton ID="linkbutton" CssClass="form-control" runat="server" Style="text-align: center;
+                            text-decoration: none; background-color: #BCD4E6;" OnClick="linkbutton_Click">Generate</asp:LinkButton>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-9">
+            <div id="frame" runat="server" frameborder="yes" scrolling="auto">
+                <iframe runat="server" id="iframe" scrolling="auto" frameborder="0" style="width: 100%;
+                    height: 800px;"></iframe>
+            </div>
+        </div>
+    </div>
+    <CR:CrystalReportViewer runat="server" ID="crystalViewer" AutoDataBind="true" />
+    <div class="col-lg-12">
+        <hr class="textline" />
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            Last Update:31 May 2019
+        </div>
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-3 text-center">
+            © 2012- 2015 MMB Bank (PLC)<br />
+            Company Confidential
+        </div>
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-4">
+            Technical Contact : <a href="" class="">T24 App Support</a></div>
+    </div>
+</asp:Content>

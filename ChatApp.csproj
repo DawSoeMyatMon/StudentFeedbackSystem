@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8563694-6639-4E9D-A6B1-974BEA55F3DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit" />
+    <Reference Include="CKEditor.NET">
+      <HintPath>..\..\..\MMB_NoteSheet\MMBNoteSheet\bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calendar\Calendar.aspx" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Calendar\css\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Calendar\css\cupertino\jquery-ui-1.7.3.custom.css" />
+    <Content Include="Calendar\fullcalendar\fullcalendar.css" />
+    <Content Include="Calendar\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Calendar\jquery\jquery-1.3.2.min.js" />
+    <Content Include="Calendar\jquery\jquery-ui-1.7.3.custom.min.js" />
+    <Content Include="Calendar\jquery\jquery-ui-timepicker-addon-0.6.2.min.js" />
+    <Content Include="Calendar\jquery\jquery.qtip-1.0.0-rc3.min.js" />
+    <Content Include="Calendar\screenshot1.JPG" />
+    <Content Include="Calendar\screenshot2.JPG" />
+    <Content Include="Calendar\screenshot3.JPG" />
+    <Content Include="Calendar\screenshot4.JPG" />
+    <Content Include="Calendar\screenshot5.JPG" />
+    <Content Include="Calendar\scripts\calendarscript.js" />
+    <Content Include="Chat.aspx" />
+    <Content Include="CreateGroup.aspx" />
+    <Content Include="GetGroupChatInfo.aspx" />
+    <Content Include="GetSearchInfo.aspx" />
+    <Content Include="img\calendar.png" />
+    <Content Include="img\calendar3.png" />
+    <Content Include="img\calendar4.jpg" />
+    <Content Include="img\exit.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Style.css" />
+    <Content Include="Style\css\bootstrap.min.css" />
+    <Content Include="Style\css\bootstrap.min.js" />
+    <Content Include="Style\css\jquery.js" />
+    <Content Include="Style\css\messsages.css" />
+    <Content Include="Style\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Style\fonts\font-awesome\fonts\fontawesome-webfont1fc6.svg" />
+    <Content Include="Style\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Style\images\boy1.jpg" />
+    <Content Include="Style\images\boy2.png" />
+    <Content Include="Style\images\boy3.jpg" />
+    <Content Include="Style\images\boy4.jpg" />
+    <Content Include="Style\images\boy5.jpg" />
+    <Content Include="Style\images\clock1.jpg" />
+    <Content Include="Style\images\clock1_gD1_icon.ico" />
+    <Content Include="Style\images\clock1_kC1_icond.ico" />
+    <Content Include="Style\images\close.png" />
+    <Content Include="Style\images\CloseButton.png" />
+    <Content Include="Style\images\delete.png" />
+    <Content Include="Style\images\delete1.png" />
+    <Content Include="Style\images\delete2.png" />
+    <Content Include="Style\images\doll1.jpg" />
+    <Content Include="Style\images\doll2.jpg" />
+    <Content Include="Style\images\download.png" />
+    <Content Include="Style\images\girl1.jpg" />
+    <Content Include="Style\images\girl2.jpg" />
+    <Content Include="Style\images\girl3.jpg" />
+    <Content Include="Style\images\girl4.jpg" />
+    <Content Include="Style\images\girl5.jpg" />
+    <Content Include="Style\images\group.jpg" />
+    <Content Include="Style\images\icon4.jpg" />
+    <Content Include="Style\images\icon5.jpg" />
+    <Content Include="Style\images\icon6.jpg" />
+    <Content Include="Style\images\info-popup.png" />
+    <Content Include="Style\images\MMB.ico" />
+    <Content Include="Style\images\sms..png" />
+    <Content Include="Style\js\jquery-ui.min.js" />
+    <Content Include="Style\js\jquery-ui.min1.js" />
+    <Content Include="Style\js\jquery.min.js" />
+    <Content Include="Style\LoginCss\css\main.css" />
+    <Content Include="Style\LoginCss\css\util.css" />
+    <Content Include="Style\LoginCss\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Style\LoginCss\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Style\LoginCss\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Style\LoginCss\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Style\LoginCss\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Style\LoginCss\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Style\LoginCss\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Style\LoginCss\images\avatar-01.jpg" />
+    <Content Include="Style\LoginCss\images\icons\2.ico" />
+    <Content Include="Style\LoginCss\images\icons\chat1_F0X_icon.ico" />
+    <Content Include="Style\LoginCss\images\icons\favicon.ico" />
+    <Content Include="Style\LoginCss\images\MMBLogo_Small.jpg" />
+    <Content Include="Style\LoginCss\js\main.js" />
+    <Content Include="Style\LoginCss\vendor\animate\animate.css" />
+    <Content Include="Style\LoginCss\vendor\animsition\css\animsition.css" />
+    <Content Include="Style\LoginCss\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Style\LoginCss\vendor\animsition\js\animsition.js" />
+    <Content Include="Style\LoginCss\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\js\popper.js" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Style\LoginCss\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Style\LoginCss\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Style\LoginCss\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Style\LoginCss\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Style\LoginCss\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Style\LoginCss\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Style\LoginCss\vendor\daterangepicker\moment.js" />
+    <Content Include="Style\LoginCss\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Style\LoginCss\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Style\LoginCss\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Style\LoginCss\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Style\LoginCss\vendor\select2\select2.css" />
+    <Content Include="Style\LoginCss\vendor\select2\select2.js" />
+    <Content Include="Style\LoginCss\vendor\select2\select2.min.css" />
+    <Content Include="Style\LoginCss\vendor\select2\select2.min.js" />
+    <Content Include="Style\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Style\Scripts\jquery-1.4.1.js" />
+    <Content Include="Style\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Style\Styles\Site.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\CalendarEvent.cs" />
+    <Compile Include="AppCode\clsChatBox.cs" />
+    <Compile Include="AppCode\clsEnum.cs" />
+    <Compile Include="AppCode\clsGlobal.cs" />
+    <Compile Include="AppCode\clsRegister.cs" />
+    <Compile Include="AppCode\clsSystemUser.cs" />
+    <Compile Include="AppCode\clsUser.cs" />
+    <Compile Include="AppCode\EventDAO.cs" />
+    <Compile Include="AppCode\ImproperCalendarEvent.cs" />
+    <Compile Include="Calendar\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGroup.aspx.cs">
+      <DependentUpon>CreateGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateGroup.aspx.designer.cs">
+      <DependentUpon>CreateGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetGroupChatInfo.aspx.cs">
+      <DependentUpon>GetGroupChatInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetGroupChatInfo.aspx.designer.cs">
+      <DependentUpon>GetGroupChatInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetSearchInfo.aspx.cs">
+      <DependentUpon>GetSearchInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetSearchInfo.aspx.designer.cs">
+      <DependentUpon>GetSearchInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Emojis\" />
+    <Folder Include="Files\" />
+    <Folder Include="Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calendar\JsonResponse.ashx" />
+    <None Include="Style\fonts\font-awesome\fonts\fontawesome-webfont1fc6.eot" />
+    <None Include="Style\fonts\font-awesome\fonts\fontawesome-webfont1fc6.ttf" />
+    <None Include="Style\fonts\font-awesome\fonts\fontawesome-webfont1fc6.woff" />
+    <None Include="Style\fonts\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="Style\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Style\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Style\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Style\fonts\glyphicons-halflings-regulard41d.eot" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="Style\LoginCss\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="Style\LoginCss\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <None Include="Style\LoginCss\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <None Include="Style\LoginCss\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <None Include="Style\LoginCss\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Black.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Bold.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Italic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Light.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-LightItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Medium.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Regular.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-SemiBold.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-Thin.ttf" />
+    <None Include="Style\LoginCss\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <None Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="Style\LoginCss\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="Style\LoginCss\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="Style\LoginCss\vendor\bootstrap\css\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3655/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
